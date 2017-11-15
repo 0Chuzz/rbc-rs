@@ -2,16 +2,9 @@ pub mod aig;
 
 
     extern crate ref_eq;
-    use self::ref_eq::ref_eq;
 
 
-    use std::collections::HashMap;
-    use std::hash::*;
-    use std::string::String;
-    use std::rc::Rc;
-    use std::vec::Vec;
-    use std::any::Any;
-    use std::borrow::Borrow;
+
 
     
 
