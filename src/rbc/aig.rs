@@ -12,8 +12,8 @@ pub enum AigNode {
 
 #[derive(PartialEq, Eq, Hash)]
 pub struct AigEdge {
-    flip: bool,
-    node: Rc<AigNode>,
+    pub flip: bool,
+    pub node: Rc<AigNode>,
 }
 
 impl Clone for AigEdge {
