@@ -1,6 +1,8 @@
 [package]
+authors = ["Stefano <stefano.varotti@unitn.it>"]
 name = "rbc"
 version = "0.1.0"
-authors = ["Stefano <stefano.varotti@unitn.it>"]
 
 [dependencies]
+any_key = "0.1.0"
+ref_eq = "1.0.0"
