@@ -1,8 +1,7 @@
 use std::collections::HashMap;
 use super::aig;
 
-extern crate generic_array;
-use self::generic_array::*;
+use generic_array::*;
 
 pub trait BooleanLike {
     fn truth() -> Self;
