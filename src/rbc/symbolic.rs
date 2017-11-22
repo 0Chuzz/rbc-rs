@@ -1,5 +1,4 @@
 use std::collections::HashMap;
-use std::vec;
 use super::aig;
 
 extern crate generic_array;
