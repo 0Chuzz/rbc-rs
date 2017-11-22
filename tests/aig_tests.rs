@@ -1,5 +1,5 @@
 extern crate rbc;
-use rbc::rbc::aig;
+use rbc::aig;
 use std::collections::hash_map;
 
 #[test]

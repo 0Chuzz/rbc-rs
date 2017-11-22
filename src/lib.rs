@@ -5,8 +5,8 @@
 
 
 
-pub mod rbc;
-
+pub mod aig;
+pub mod symbolic;
 
 
 #[cfg(test)]
@@ -16,7 +16,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        use rbc::aig::*;
+        use aig::*;
         let a = var(String::from("a"));
         let b = var(String::from("b"));
         let mut ass = HashMap::new();
