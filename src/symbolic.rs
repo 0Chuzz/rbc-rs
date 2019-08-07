@@ -1,5 +1,6 @@
 use std::collections::HashMap;
-use super::aig;
+use formula;
+use aig;
 
 use generic_array::*;
 
@@ -32,10 +33,10 @@ impl<N:ArrayLength<bool>> BooleanLike for GenericArray<bool,N> {
         return ret;
     }
 } 
-
-impl BooleanLike for aig::AigEdge {
+/*
+impl<'a> BooleanLike for aig::AigEdge<'a> {
     fn truth() -> Self{
-        aig::truen()
+        formula::truen()
     }
     fn conjunction(a:&Self, b:&Self) -> Self {
         aig::and(a,b)
@@ -68,5 +69,5 @@ impl<B : BooleanLike + Clone> SymbolicEval<String, B> for aig::AigNode {
             }
         }
     }
-}
+}*/
 

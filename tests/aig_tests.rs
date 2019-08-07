@@ -1,23 +1,24 @@
 extern crate rbc;
-use rbc::aig;
-use std::collections::hash_map;
+
+use std::collections::hash_map::HashMap;
+use rbc::formula::Formula;
 
 #[test]
 fn test_hello() {
-    let t = aig::truen();
-    let empt = hash_map::HashMap::default();
-    assert_eq!(t.eval(&empt), true);
+    let f = Formula::new();
+    let empt = HashMap::default();
+    assert_eq!(f.trueval().eval(&empt), true);
 }
 
 
 #[test]
 fn it_works() {
-    use aig::*;
-    let a = var(String::from("a"));
-    let b = var(String::from("b"));
+    let f = Formula::new();
+    let a = f.var(&String::from("a"));
+    let b = f.var(&String::from("b"));
     let mut ass = HashMap::new();
     ass.insert(String::from("a"), true);
     ass.insert(String::from("b"), false);
     
-    or(&a, &b).eval(&ass);
+    assert_eq!(f.or(&a, &b).eval(&ass), true);
 }
