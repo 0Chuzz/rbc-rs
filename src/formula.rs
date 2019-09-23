@@ -1,9 +1,9 @@
-use aig::*;
+use crate::aig::*;
 use std::collections::BTreeSet;
 use std::collections::HashMap;
 use std::iter::FromIterator;
 use std::cell::RefCell;
-use arena::TypedArena;
+use typed_arena::Arena as TypedArena;
 
 #[derive(PartialEq, Eq, Hash, Clone)]
 enum NodeKey<'a> {

@@ -2,8 +2,10 @@
 authors = ["Stefano <stefano.varotti@unitn.it>"]
 name = "rbc"
 version = "0.1.0"
+edition = '2018'
 
 [dependencies]
-generic-array = "0.9.0"
-nom = "3.2.1"
-ascii = "0.8.6"
+generic-array = "*"
+typed-arena = '*'
+nom = "*"
+ascii = "*"

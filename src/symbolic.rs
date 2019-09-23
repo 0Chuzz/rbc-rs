@@ -1,17 +1,18 @@
 use std::collections::HashMap;
-use formula;
-use aig;
+use crate::formula;
+use crate::aig;
 
 use generic_array::*;
+use generic_array::sequence::GenericSequence;
 
 pub trait BooleanLike {
     fn truth() -> Self;
-    fn conjunction(&Self, &Self) -> Self;
-    fn negation(&Self) -> Self;
+    fn conjunction(a: &Self, b: &Self) -> Self;
+    fn negation(a: &Self) -> Self;
 }
 
 pub trait SymbolicEval<K, B: BooleanLike + Clone> {
-    fn eval_symbolic(&self, &mut HashMap<K, B>) -> B;
+    fn eval_symbolic(&self, assigment: &mut HashMap<K, B>) -> B;
 }
 
 impl<N:ArrayLength<bool>> BooleanLike for GenericArray<bool,N> {
